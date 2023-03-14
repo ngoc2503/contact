@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="groupMainId" prefHeight="400.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GroupController">
+   <children>
+      <Label layoutX="33.0" layoutY="46.0" text="Enter group name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldSearch" layoutX="219.0" layoutY="40.0" onKeyPressed="#keySearchPressed"
+                 prefHeight="39.0" prefWidth="304.0" />
+      <Button layoutX="600.0" layoutY="40.0" mnemonicParsing="false" onAction="#searchItem"
+              text="Search" fx:id="buttonSearch">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listViewGroup" layoutX="33.0" layoutY="100.0" prefHeight="291.0" prefWidth="319.0" />
+      <Label layoutX="378.0" layoutY="112.0" text="Enter group name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldGroup" layoutX="378.0" layoutY="161.0" prefHeight="39.0" prefWidth="304.0" />
+      <HBox layoutX="378.0" layoutY="212.0" prefHeight="51.0" prefWidth="304.0" spacing="35.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addNewGroup" text="Save">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateId" mnemonicParsing="false" onAction="#updateGroup" text="Update">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteId" mnemonicParsing="false" onAction="#deleteGroup" text="Delete">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="600.0" layoutY="338.0" mnemonicParsing="false" onAction="#closeNowScene" text="Close">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

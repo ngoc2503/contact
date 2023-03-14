@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="134.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="261.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="207.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="315.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="35.0" prefWidth="246.0" text="Update a contact" GridPane.columnSpan="2">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label text="First Name" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameId" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="lastNameId" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Last Name" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Phone" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Email" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Birth date" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label text="Group" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveNewContact" text="Save" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#closeScene" text="Close" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="phoneId" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="emailId" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <DatePicker fx:id="birthDateId" prefHeight="39.0" prefWidth="437.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ComboBox fx:id="groupId" prefHeight="39.0" prefWidth="439.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label fx:id="labelFirstName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="labelLastName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label fx:id="labelPhone" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label fx:id="labelEmail" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

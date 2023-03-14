@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="540.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller"
+            fx:id="anchorPaneMain">
+   <children>
+      <Label layoutX="39.0" layoutY="56.0" text="Filter by group">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="comboBoxGroup" layoutX="187.0" layoutY="50.0" prefHeight="45.0" prefWidth="150.0"
+                style="-fx-font-size:16; -fx-font-weight:bold"/>
+      <Label layoutX="363.0" layoutY="59.0" text="Enter contact infomation">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField layoutX="588.0" layoutY="50.0" prefHeight="40.0" prefWidth="238.0"
+                 fx:id="textFieldSearchId" onKeyPressed="#showSearchButton"/>
+      <Button layoutX="853.0" layoutY="50.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="77.0"
+              text="Search" fx:id="buttonIdSearch" onAction="#searchContact"/>
+      <TableView fx:id="table" layoutX="39.0" layoutY="134.0" prefHeight="318.0" prefWidth="930.0">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="107.0" text="First Name" />
+          <TableColumn fx:id="lastName" prefWidth="102.0" text="Last Name" />
+            <TableColumn fx:id="phone" prefWidth="187.0" text="Phone" />
+            <TableColumn fx:id="email" prefWidth="221.0" text="Email" />
+            <TableColumn fx:id="birthDate" prefWidth="152.0" text="Birth Date" />
+            <TableColumn fx:id="groupName" prefWidth="158.0" text="Group Name" />
+        </columns>
+      </TableView>
+      <Button layoutX="64.0" layoutY="481.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="80.0" text="Delete" onAction="#deleteContact"/>
+      <Button layoutX="210.0" layoutY="481.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="108.0" text="Update" onAction="#updateContact"/>
+      <Button layoutX="351.0" layoutY="481.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="80.0" text="Add" onAction="#addNewContact"/>
+      <Button layoutX="756.0" layoutY="481.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="204.0" text="Manage Groups" onAction="#showDialogGroupname" />
+   </children>
+</AnchorPane>
